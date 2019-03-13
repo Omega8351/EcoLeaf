@@ -1,0 +1,91 @@
+body{
+	background-color: rgb(169, 194, 146);
+}
+
+#menu{
+	background-color: rgb(231, 215, 137);
+	height: 90px;
+}
+
+.submenu{
+	margin-right: 8px;
+	margin-top: 12px;
+}
+
+#logo{
+	width: 140px;
+	margin-left: 8px;
+	margin-top: 8px;
+}
+
+.carrusel-items{
+	width: 185px;
+}
+
+p{
+	text-align: justify;
+	font-size: 17px;
+}
+
+#mv{
+	width:125px;
+	align-self: center;
+}
+
+.cartaprincipal{
+	background-color: rgb(140, 173, 109);
+	border-style: inherit;
+}
+
+.tab{
+	text-decoration-color: black;
+	font-weight: bold;
+	color: black;
+	background-color: rgb(145, 176, 115);
+}
+
+.productos{
+	width: 35%;
+	margin-top: 25px;
+}
+
+#cuadrado{
+	border-radius: 40px;
+}
+
+#mision, #vision{
+	font-size: 17px;
+}
+
+.contacto{
+	background-color: rgb(140, 173, 109);
+	border-radius: 5px;
+}
+
+#footer{
+	background-color: rgb(231, 215, 137);
+}
+
+.avatar{
+	padding-top: 10px;
+	margin-left: 10px;
+}
+
+.imgf{
+	width: 100px;
+}
+
+#f1{
+	margin-left: -25px;
+	margin-bottom: -110px;
+}
+
+#f2{
+	margin-left: 40%;
+	margin-bottom: -110px;
+}
+
+#f3{
+	margin-left: 85%;
+	margin-bottom: -25px;
+}
