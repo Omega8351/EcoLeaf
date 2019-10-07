@@ -17,8 +17,14 @@
       <div class="row">
         <div class="col s5 m4">
           <div class="carousel principal">
-            <a class="carousel-item" href=""><img class="carrusel-items" src="../img/eco1.jpg"></a>
-            <a class="carousel-item" href=""><img class="carrusel-items" src="../img/eco2.jpg"></a>
+            <?php
+            //Agregamos el código php para llenar el slider de los productos con las imagenes de la base de datos
+              $query = "SELECT imagen_producto FROM tb_productos";
+              $resultado = $mysqli->query($query);
+              while ($fila = $resultado->fetch_assoc()) { ?>
+                <a class="carousel-item" href=""><img class="carrusel-items" src="../<?php echo $fila['imagen_producto']; ?>"></a>
+              <?php }
+            ?>
           </div>
         </div>
         <br>
@@ -26,10 +32,16 @@
         <br>
         <div class="col s7 m7">
           <div>
-            <h3>¿Qué es EcoLeaf?</h3>
+            <?php
+            //Agregamos el código php para mostrar el nombre de la empresa y la descripción
+              $query = "SELECT nombre_empresa, descripcion_empresa FROM tb_empresa WHERE codigo_empresa=1";
+              $resultado = $mysqli->query($query);
+              $fila = $resultado->fetch_assoc();
+            ?>
+            <h3>¿Qué es <?php echo $fila['nombre_empresa'];?>?</h3>
           </div>
           <div>
-            <p>En nuestro país existe un consumo masivo de productos desechables que generan un gran impacto al medio ambiente es por ello que hemos decidido desarrollar nuevos procesos de producción que contribuyan al desarrollo sustentable de la economía y la sociedad. De esta forma, ha surgido la consideración de la ecología como un componente básico de la filosofía o forma de pensar de nuestro proyecto que da lugar al concepto de Marketing Ecológico y Biocomercio Sostenible a nuestra Empresa denominada ECOLEAF, SA. DE CV. Nuestra empresa EcoLeaf ofrece una alternativa y solución ecológica perfecta para la reducción de desechos generados por la vajilla desechable tradicional, brindándoles a nuestros clientes una alternativa inocua, biodegradable, compostable y de alta calidad.</p>
+            <p><?php echo $fila['descripcion_empresa'];?></p>
           </div>
         </div>
       </div>
@@ -46,10 +58,15 @@
               <li class="tab"><a href="#vision">Visión</a></li>
             </ul>
           </div>
+          <?php
+            //Agregamos el código php para mostrar la misión y visión de la empresa
+              $query = "SELECT mision, vision FROM tb_empresa WHERE codigo_empresa=1";
+              $resultado = $mysqli->query($query);
+              $fila = $resultado->fetch_assoc();
+            ?>
           <div class="card-content cartaprincipal col s3 m5 g7">
-            <div id="mision">Ser reconocidos por ofrecer a nuestros clientes una nueva alternativa ecológica, para reducir el impacto ambiental en nuestra vida cotidiana, a través de la fabricación y comercialización de platos desechables de palma areca y fibras naturales, incorporando tecnología  ecológica y diseños innovadores, 100% orgánicos y de excelente calidad.</div>
-            <div id="vision">Ser una empresa  rentable de biocomercio, líder en el mercado, ofreciendo la más amplia gama de productos amigables con el medio ambiente y manteniendo la calidad de nuestros productos, para satisfacer el sector alimenticio del mercado nacional e internacional. Esto con el fin de reducir la generación de basura, y con ello mejorar nuestro entorno. 
-            </div>
+            <div id="mision"><?php echo $fila['mision'];?></div>
+            <div id="vision"><?php echo $fila['vision'];?></div>
           </div>
         </div>
       </div>

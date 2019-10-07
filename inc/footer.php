@@ -1,8 +1,3 @@
-<!-- <footer class="footer-copyright">
-    <div id="footer" align="center">
-      <h6>© ECOLEAF S.A. de C.V.</h6>
-    </div>
-</footer> -->
 <footer class="page-footer" id="footer">
 	<div>
 		<div class="row">
@@ -18,7 +13,16 @@
 		</div>
 	  	<div class="footer-copyright">
 		    <div class="container">
-		    © ECOLEAF S.A. de C.V.
+		    <?php
+            //Agregamos el código php para mostrar el nombre de la empresa en el copyright
+              $query = "SELECT nombre_empresa FROM tb_empresa WHERE codigo_empresa=1";
+              $resultado = $mysqli->query($query);
+              $fila = $resultado->fetch_assoc();
+              echo $fila['nombre_empresa'];
+
+              //Cerramos la conexión
+              $mysqli->close();
+            ?>
 		    </div>
 	  	</div>
 	</div>
