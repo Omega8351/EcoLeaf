@@ -39,7 +39,13 @@
           <li class="collection-item avatar">
             <i class="material-icons circle">question_answer</i>
             <span class="title nombre">Contáctenos</span>
-            <p>ecoleaf.sa.de.cv@gmail.com</p>
+            <?php
+            //Agregamos el código php para mostrar el correo de contacto de la empresa
+              $query = "SELECT correo_empresa FROM tb_empresa WHERE codigo_empresa=1";
+              $resultado = $mysqli->query($query);
+              $fila = $resultado->fetch_assoc();
+            ?>
+            <p><?php echo $fila['correo_empresa']; ?></p>
             <br>
           </li>
         </ul>
