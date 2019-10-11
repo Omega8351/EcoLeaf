@@ -52,6 +52,24 @@
         </ul>
       </div>
       <br>
+
+      <div class="row">
+        <div class="col s1 m1 l1">
+        </div>
+        <div class="col s3 m3 l3">
+          <img class="asociados imgc" src="../img/src9.png">
+        </div>
+        <div class="col s1 m1 l1">
+        </div>
+        <div class="col s3 m3 l3">
+          <img class="asociados" src="../img/src10.png">
+        </div>
+        <div class="col s1 m1 l1">
+        </div>
+        <div class="col s3 m3 11">
+          <img class="asociados imgc" src="../img/src11.jpg">
+        </div>
+      </div>
       <!-- Incluimos el archivo maestro que enlaza nuestros scripts -->
       <?php include '../inc/scripts.php' ?>
     </body>
