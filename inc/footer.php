@@ -22,7 +22,7 @@
 
               //Cerramos la conexión
               $mysqli->close();
-            ?>
+            ?> ™
 		    </div>
 	  	</div>
 	</div>

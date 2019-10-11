@@ -1,3 +1,7 @@
+<!-- Agregamos la imagen que se muestra en todos los sitios -->
+<div class="col s12">
+  <img class="topimg" src="../img/src7.jpg">
+</div>
 <!-- Creamos nuestro menú -->
 <nav id="menu">
     <div class="nav-wrapper">

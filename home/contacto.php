@@ -22,8 +22,8 @@
           <li class="collection-item avatar">
             <i class="material-icons circle">palette</i>
             <span class="title nombre">Mayra Elisa Estrada</span>
-            <p>Artesana<br>
-               Estudiante de Licenciatura en Trabajo Social</p>
+            <p>Representante Legal<br>
+               Teléfono: 7112-6376</p>
             <br>
           </li>
         </ul>
@@ -31,7 +31,8 @@
           <li class="collection-item avatar">
             <i class="material-icons circle">pie_chart</i>
             <span class="title nombre">Donny Soriano</span>
-            <p>Licenciado en Mercadotecnia</p>
+            <p>Encargado de Mercadotecnia <br>
+                Teléfono: 7721-2045</p>
             <br>
           </li>
         </ul>

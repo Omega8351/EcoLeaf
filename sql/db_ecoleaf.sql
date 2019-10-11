@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 07-10-2019 a las 09:43:19
+-- Tiempo de generación: 11-10-2019 a las 17:12:17
 -- Versión del servidor: 10.4.6-MariaDB
 -- Versión de PHP: 7.3.9
 
@@ -53,6 +53,9 @@ CREATE TABLE `tb_empresa` (
   `mision` varchar(500) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Misión de la empresa',
   `vision` varchar(500) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Visión de la empresa',
   `descripcion_empresa` varchar(800) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Descripción de la empresa',
+  `impSocial` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `impAmbiental` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
+  `impEco` varchar(1000) COLLATE utf8_unicode_ci NOT NULL,
   `logo_empresa` varchar(100) COLLATE utf8_unicode_ci NOT NULL COMMENT 'URL de la ubicación del logo de la empresa',
   `correo_empresa` varchar(75) COLLATE utf8_unicode_ci NOT NULL COMMENT 'Correo de contacto de la empresa'
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
@@ -61,8 +64,8 @@ CREATE TABLE `tb_empresa` (
 -- Volcado de datos para la tabla `tb_empresa`
 --
 
-INSERT INTO `tb_empresa` (`codigo_empresa`, `nombre_empresa`, `mision`, `vision`, `descripcion_empresa`, `logo_empresa`, `correo_empresa`) VALUES
-(1, 'ECOLEAF S.A. de C.V.', 'Ser reconocidos por ofrecer a nuestros clientes una nueva alternativa ecológica, para reducir el impacto ambiental en nuestra vida cotidiana, a través de la fabricación y comercialización de platos desechables de palma areca y fibras naturales, incorporando tecnología ecológica y diseños innovadores, 100% orgánicos y de excelente calidad.', 'Ser una empresa rentable de biocomercio, líder en el mercado, ofreciendo la más amplia gama de productos amigables con el medio ambiente y manteniendo la calidad de nuestros productos, para satisfacer el sector alimenticio del mercado nacional e internacional. Esto con el fin de reducir la generación de basura, y con ello mejorar nuestro entorno.', 'En nuestro país existe un consumo masivo de productos desechables que generan un gran impacto al medio ambiente es por ello que hemos decidido desarrollar nuevos procesos de producción que contribuyan al desarrollo sustentable de la economía y la sociedad. De esta forma, ha surgido la consideración de la ecología como un componente básico de la filosofía o forma de pensar de nuestro proyecto que da lugar al concepto de Marketing Ecológico y Biocomercio Sostenible a nuestra Empresa denominada ECOLEAF, SA. DE CV. Nuestra empresa EcoLeaf ofrece una alternativa y solución ecológica perfecta para la reducción de desechos generados por la vajilla desechable tradicional, brindándoles a nuestros clientes una alternativa inocua, biodegradable, compostable y de alta calidad.', 'img/Imagen1.png', 'ecoleaf.sa.de.cv@gmail.com');
+INSERT INTO `tb_empresa` (`codigo_empresa`, `nombre_empresa`, `mision`, `vision`, `descripcion_empresa`, `impSocial`, `impAmbiental`, `impEco`, `logo_empresa`, `correo_empresa`) VALUES
+(1, 'ECOLEAF S.A. de C.V.', 'Ser reconocidos por ofrecer a nuestros clientes una nueva alternativa ecológica, para reducir el impacto ambiental en nuestra vida cotidiana, a través de la fabricación y comercialización de platos desechables de palma areca y fibras naturales, incorporando tecnología ecológica y diseños innovadores, 100% orgánicos y de excelente calidad.', 'Ser una empresa rentable de biocomercio, líder en el mercado, ofreciendo la más amplia gama de productos amigables con el medio ambiente y manteniendo la calidad de nuestros productos, para satisfacer el sector alimenticio del mercado nacional e internacional. Esto con el fin de reducir la generación de basura, y con ello mejorar nuestro entorno.', 'En nuestro país existe un consumo masivo de productos desechables que generan un gran impacto al medio ambiente es por ello que hemos decidido desarrollar nuevos procesos de producción que contribuyan al desarrollo sustentable de la economía y la sociedad. De esta forma, ha surgido la consideración de la ecología como un componente básico de la filosofía o forma de pensar de nuestro proyecto que da lugar al concepto de Marketing Ecológico y Biocomercio Sostenible a nuestra Empresa denominada ECOLEAF, SA. DE CV. Nuestra empresa EcoLeaf ofrece una alternativa y solución ecológica perfecta para la reducción de desechos generados por la vajilla desechable tradicional, brindándoles a nuestros clientes una alternativa inocua, biodegradable, compostable y de alta calidad.', 'Beneficiamos a comunidades  y  personas que aportan en la logística de recolección de la materia prima. (jardineros y personas que posean una plantación de areca, plátano  y de maíz).', 'No causa ningún daño al Medio Ambiente.', 'Se crearan fuentes de empleo. ', 'img/Imagen1.png', 'ecoleaf.sa.de.cv@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -83,8 +86,10 @@ CREATE TABLE `tb_productos` (
 --
 
 INSERT INTO `tb_productos` (`codigo_producto`, `codigo_catalogo`, `nombre_producto`, `descripcion_producto`, `imagen_producto`) VALUES
-(1, 1, 'Plato Cuadrado de Hoja de Palma (8\"x8\")', 'Plato cuadrado desechable de  8”x8” fabricado de hoja de palma 100% Biodegradable. Es apto para utilizar en horno, microondas y congelador, lo que lo convierte en un plato muy versátil y resistente.', 'img/eco1.jpg'),
-(2, 1, 'Plato Redondo de Hoja de Palma (6\")', 'Plato redondo desechable de 6” fabricado de hoja de palma. 100% Biodegradable y apto para su uso en horno, microondas y congelador.', 'img/eco2.jpg');
+(1, 1, 'Plato Cuadrado de Hoja de Palma (8\"x8\")', 'Plato cuadrado desechable de  8”x8” fabricado de hoja de palma 100% Biodegradable. Es apto para utilizar en horno, microondas y congelador, lo que lo convierte en un plato muy versátil y resistente.', 'img/eco1.png'),
+(2, 1, 'Plato Redondo de Hoja de Palma (6\" de radio)', 'Plato redondo desechable de 6” fabricado de hoja de palma. 100% Biodegradable y apto para su uso en horno, microondas y congelador.', 'img/eco2.png'),
+(3, 1, 'Plato Cuadrado de Hoja de Maíz (7\"X7\")', 'Plato cuadrado desechable de 7”x7” fabricado de hoja de maíz 100%            Biodegradable. Puede utilizarse en   microondas y congelador.', 'img/eco3.png'),
+(4, 1, 'Plato Cuadrado de Hoja de Plátano (7\"x7\")', 'Plato redondo desechable de 7”. Sin aditivos. Sin mezclas de          sustancias químicas al contacto con   alimentos calientes.', 'img/eco4.png');
 
 --
 -- Índices para tablas volcadas
@@ -130,7 +135,7 @@ ALTER TABLE `tb_empresa`
 -- AUTO_INCREMENT de la tabla `tb_productos`
 --
 ALTER TABLE `tb_productos`
-  MODIFY `codigo_producto` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Código del producto', AUTO_INCREMENT=3;
+  MODIFY `codigo_producto` int(11) NOT NULL AUTO_INCREMENT COMMENT 'Código del producto', AUTO_INCREMENT=5;
 
 --
 -- Restricciones para tablas volcadas

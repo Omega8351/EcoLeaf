@@ -41,15 +41,13 @@
       </div>
       <br>
       <!-- Mostraremos ambos productos en cards de materialize debido a su versatilidad -->
-      <div class="row">
+      <div class="row col s12 m12">
         <?php
           //Agregamos el código php para mostrar los productos del catalogo
           $query = "SELECT nombre_producto, descripcion_producto, imagen_producto FROM tb_productos WHERE codigo_catalogo=1";
           $resultado = $mysqli->query($query);
           while ($fila = $resultado->fetch_assoc()) { ?>
-            <div class="col s1 m1">
-            </div>
-            <div class="card col s4 m4 cartaprincipal" align="center">
+            <div class="card col s6 m6 cartaprincipal" align="center">
               <div class="card-image productos waves-effect waves-block waves-light cartaprincipal" id="cuadrado">
                 <img class="activator" src="../<?php echo $fila['imagen_producto']; ?>">
               </div>
@@ -61,8 +59,7 @@
                 <p><?php echo $fila['descripcion_producto']; ?></p>
               </div>
             </div>
-          <?php }
-        ?>
+          <?php }?>
       </div>
       <br>
       <!-- Incluimos el archivo maestro que enlaza nuestros scripts -->
